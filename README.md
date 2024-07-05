@@ -24,7 +24,7 @@ packages:
 mkdir -p packages/vue-app # 创建文件夹 -p 表示没有 packages 文件夹也同步创建
 cd packages/vue-app
 
-pnpm create vite@latest . --template vue
+pnpm create vite@latest
 ```
 
 ### React 项目
@@ -33,7 +33,7 @@ pnpm create vite@latest . --template vue
 mkdir -p packages/react-app # 创建文件夹 -p 表示没有 packages 文件夹也同步创建
 cd packages/react-app
 
-pnpm create vite@latest . --template react
+pnpm create vite@latest
 ```
 
 ## 安装和链接依赖
