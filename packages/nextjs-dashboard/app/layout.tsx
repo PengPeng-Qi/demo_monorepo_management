@@ -1,14 +1,16 @@
-import { inter } from '@/app/ui/fonts'
-import './ui/global.css'
+// 自定义字体
+import { inter } from '@/app/ui/fonts';
+// 全局样式
+import './ui/global.css';
 
 export default function RootLayout({
-  children
-}: {
-  children: React.ReactNode
-}) {
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
-  )
+  );
 }
