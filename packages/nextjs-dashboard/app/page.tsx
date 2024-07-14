@@ -1,9 +1,9 @@
-import styles from '@/app/ui/home.module.css';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-import Image from 'next/image';
-import Link from 'next/link';
-import AcmeLogo from './ui/acme-logo';
-import { lusitana } from './ui/fonts';
+import styles from "@/app/ui/home.module.css";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
+import Link from "next/link";
+import AcmeLogo from "./ui/acme-logo";
+import { lusitana } from "./ui/fonts";
 
 export default function Page() {
   return (
@@ -17,10 +17,10 @@ export default function Page() {
           {/* 使用模块 CSS 的写法 */}
           <div className={styles.shape} />
           <p className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal `}>
-            <strong>Welcome to Acme.</strong> This is the example for the{' '}
+            <strong>Welcome to Acme.</strong> This is the example for the{" "}
             <a href="https://nextjs.org/learn/" className="text-blue-500">
               Next.js Learn Course
-            </a>{' '}
+            </a>{" "}
             , brought to you by Vercel.
           </p>
           <Link

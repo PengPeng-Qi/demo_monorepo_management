@@ -1,7 +1,7 @@
 // 自定义字体
-import { inter } from '@/app/ui/fonts';
+import { inter } from "@/app/ui/fonts";
 // 全局样式
-import './ui/global.css';
+import "./ui/global.css";
 
 export default function RootLayout({
   children,
