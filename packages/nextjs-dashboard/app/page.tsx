@@ -1,5 +1,10 @@
 import styles from "@/app/ui/home.module.css";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+/**
+ * 1. 使用内置的 Image 会自动将图片格式转换为 WebP
+ * 2. 加载时自动防止布局移动
+ * 3. 默认懒加载
+ */
 import Image from "next/image";
 import Link from "next/link";
 import AcmeLogo from "./ui/acme-logo";
