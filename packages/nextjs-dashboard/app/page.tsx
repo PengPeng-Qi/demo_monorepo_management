@@ -13,6 +13,14 @@ import { lusitana } from "./ui/fonts";
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col p-6">
+      {/*
+        静态渲染（default）：打包的时候就会生成，但是不会实时获取最新数据
+          1. 请求更快，内容可以被缓存和使用 CDN
+          2. 减小服务器压力：内容被缓存，服务器不比为每个用户请求动态生成内容
+          3. 对 SEO 友好
+
+        常用于博客和产品介绍页面
+      */}
       <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-500 p-4 md:h-52">
         <AcmeLogo />
       </div>

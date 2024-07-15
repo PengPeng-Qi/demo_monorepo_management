@@ -1,15 +1,23 @@
-import RevenueChart from '@/app/ui/dashboard/revenue-chart';
-import { lusitana } from '@/app/ui/fonts';
-import { CardsSkeleton, LatestInvoicesSkeleton, RevenueChartSkeleton } from '@/app/ui/skeletons';
-import { Suspense } from 'react';
-import CardWrapper from '../../ui/dashboard/cards';
-import LatestInvoices from '../../ui/dashboard/latest-invoices';
+import RevenueChart from "@/app/ui/dashboard/revenue-chart";
+import { lusitana } from "@/app/ui/fonts";
+import { CardsSkeleton, LatestInvoicesSkeleton, RevenueChartSkeleton } from "@/app/ui/skeletons";
+import { Suspense } from "react";
+import CardWrapper from "../../ui/dashboard/cards";
+import LatestInvoices from "../../ui/dashboard/latest-invoices";
 
 export default async function Page() {
   return (
     <main>
       <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>Dashboard</h1>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {/*
+          动态渲染：用户发起请求时，为每个用户生成内容
+            1. 数据可以是实时的
+            2. 用户特定的内容，个性化配置等，可以根据用户交互更新数据
+            3. 允许访问只在请求时才知道的信息，例如 Cookie、URL 参数等
+
+          在渲染的过程中，如果发现页面有动态函数或者没有缓存的数据请求，Next.js 就会切换为动态渲染整个路由
+        */}
         <Suspense fallback={<CardsSkeleton />}>
           <CardWrapper />
         </Suspense>
