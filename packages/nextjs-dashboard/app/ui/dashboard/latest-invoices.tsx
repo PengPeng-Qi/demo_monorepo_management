@@ -1,12 +1,12 @@
-import { fetchLatestInvoices } from '@/app/lib/data';
-import { lusitana } from '@/app/ui/fonts';
-import { ArrowPathIcon } from '@heroicons/react/24/outline';
-import clsx from 'clsx';
-import Image from 'next/image';
+import { fetchLatestInvoices } from "@/app/lib/data";
+import { lusitana } from "@/app/ui/fonts";
+import { ArrowPathIcon } from "@heroicons/react/24/outline";
+import clsx from "clsx";
+import Image from "next/image";
 
 export default async function LatestInvoices() {
-  // Make component async, remove the props
   const latestInvoices = await fetchLatestInvoices(); // Fetch data inside the component
+
   return (
     <div className="flex w-full flex-col md:col-span-4">
       <h2 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>Latest Invoices</h2>
@@ -18,8 +18,8 @@ export default async function LatestInvoices() {
             return (
               <div
                 key={invoice.id}
-                className={clsx('flex flex-row items-center justify-between py-4', {
-                  'border-t': i !== 0,
+                className={clsx("flex flex-row items-center justify-between py-4", {
+                  "border-t": i !== 0,
                 })}
               >
                 <div className="flex items-center">
