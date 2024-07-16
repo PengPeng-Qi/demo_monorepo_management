@@ -17,6 +17,10 @@ export default async function Page() {
             3. 允许访问只在请求时才知道的信息，例如 Cookie、URL 参数等
 
           在渲染的过程中，如果发现页面有动态函数或者没有缓存的数据请求，Next.js 就会切换为动态渲染整个路由
+
+          流：Suspence（单个组件） 和 loading.tsx（整个路由） 都可以开启流模式，将页面分为多个 chunk、分片进行加载，互相之间不影响
+
+          在使用 Suspence 时，建议将数据获取移到需要的组件内
         */}
         <Suspense fallback={<CardsSkeleton />}>
           <CardWrapper />
