@@ -19,6 +19,7 @@ export default function Search({ placeholder }: Readonly<{ placeholder: string }
     console.log(`Searching... ${term}`);
 
     const params = new URLSearchParams(searchParams);
+    // 用户输入的时候，页码重置为 1
     params.set("page", "1");
 
     if (term) {
