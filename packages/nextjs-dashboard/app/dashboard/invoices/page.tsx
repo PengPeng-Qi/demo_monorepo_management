@@ -7,6 +7,7 @@ import Search from "@/app/ui/search";
 import { InvoicesTableSkeleton } from "@/app/ui/skeletons";
 import { Suspense } from "react";
 
+// 组件内置的 prop @see：https://nextjs.org/docs/app/api-reference/file-conventions/page#searchparams-optional
 export default async function Page({
   searchParams,
 }: Readonly<{
