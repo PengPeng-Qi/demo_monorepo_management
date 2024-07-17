@@ -1,8 +1,14 @@
+/**
+ * Error 需要时客户端组件
+ *
+ * 可以捕获意外的错误
+ */
 "use client";
 
 import { useEffect } from "react";
 
-export default function Error({ error, reset }: Readonly<{ error: Error & { digest?: string }; reset: () => void }>) {
+// 内置两个参数
+export default function Page({ error, reset }: Readonly<{ error: Error & { digest?: string }; reset: () => void }>) {
   useEffect(() => {
     // Optionally log the error to an error reporting service
     console.error(error);

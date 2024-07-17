@@ -11,6 +11,7 @@ export default async function Page({ params }: Readonly<{ params: { id: string }
   // 获取发票信息和所有用户信息
   const [invoice, customers] = await Promise.all([fetchInvoiceById(id), fetchCustomers()]);
 
+  // 如果不存在该 invoice，则导航到 not-found 页面
   if (!invoice) {
     notFound();
   }

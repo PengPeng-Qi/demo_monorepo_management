@@ -1,5 +1,8 @@
-import { FaceFrownIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
+/**
+ * not-found 优先级高于 error.tsx
+ */
+import { FaceFrownIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 export default function NotFound() {
   return (
