@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "微博夜间模式插件",
+  "description": "自动根据系统夜间模式去修改微博的夜间模式，使微博夜间模式跟随系统夜间模式，减少用户点击夜间模式次数。",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": ["https://weibo.com/*"]
+    }
+  ]
+}
